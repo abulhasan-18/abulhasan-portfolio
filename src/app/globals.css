@@ -1,0 +1,56 @@
+/* Tailwind v4: import once */
+@import "tailwindcss";
+
+/* smooth scrolling + selection */
+html,
+body {
+  scroll-behavior: smooth;
+}
+::selection {
+  background-color: #7dd3fc;
+  color: #000;
+} /* sky-300-like */
+
+/* subtle grid background */
+body {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+html.dark body {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+}
+
+/* custom components */
+@layer components {
+  .card {
+    border-radius: 1rem; /* rounded-2xl */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* border-black/5 */
+    background-color: rgba(255, 255, 255, 0.7); /* bg-white/70 */
+    backdrop-filter: blur(12px); /* backdrop-blur-md */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+    transition: box-shadow 0.2s;
+  }
+  .card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -4px rgba(0, 0, 0, 0.1); /* hover:shadow-lg */
+  }
+  html.dark .card {
+    border: 1px solid rgba(255, 255, 255, 0.1); /* dark:border-white/10 */
+    background-color: rgba(255, 255, 255, 0.05); /* dark:bg-white/5 */
+  }
+
+  /* fancy underline links */
+  .link-underline {
+    background-image: linear-gradient(to right, #38bdf8, #38bdf8); /* sky-400 */
+    background-size: 0% 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 200ms ease;
+  }
+  a:hover .link-underline {
+    background-size: 100% 2px;
+  }
+}
