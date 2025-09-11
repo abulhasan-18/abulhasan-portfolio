@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HeartHandshake, ExternalLink, Mail } from "lucide-react";
+import { HeartHandshake, ExternalLink, Mail, Github } from "lucide-react";
 
 const activities = [
   "Organized blood donation & donation camps with Lion’s Club.",
   "Participated in cricket & football charity tournaments.",
   "Built an open-source YouTube watch-party app in Next.js and deployed on Vercel during college.",
+  "Maintained GitHub repositories showcasing full-stack, Flutter, and Data Engineering projects.",
 ];
 
 export default function Activities() {
@@ -46,6 +47,14 @@ export default function Activities() {
             className="inline-flex items-center gap-2 rounded-lg bg-[rgb(43,121,255)] px-3 py-2 text-white hover:brightness-95 transition"
           >
             <Mail className="h-4 w-4" /> Contact Me
+          </a>
+          <a
+            href="https://github.com/abulhasan-18"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-black/10 dark:border-white/20 px-3 py-2 hover:bg-black/5 dark:hover:bg-white/10 transition"
+          >
+            <Github className="h-4 w-4" /> GitHub
           </a>
         </div>
       </motion.div>

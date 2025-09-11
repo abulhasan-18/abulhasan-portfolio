@@ -15,7 +15,7 @@ export default function Footer() {
         transition={{ duration: 0.35 }}
         className="container py-8 text-sm text-gray-600 dark:text-gray-400 flex flex-col md:flex-row items-center justify-between gap-4"
       >
-        <p>
+        <p className="pl-7">
           © {new Date().getFullYear()} Mohammed Abulhasan M. All rights
           reserved.
         </p>
