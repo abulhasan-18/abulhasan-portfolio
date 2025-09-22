@@ -23,7 +23,11 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 border-b bg-white/70 dark:bg-black/40 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/40">
+    <nav
+      className="sticky top-0 z-50 border-b border-white/10 dark:border-black/20
+                bg-white/70 dark:bg-black/40 nn backdrop-blur
+                supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-black/40"
+    >
       {/* Top bar */}
       <div className="container flex h-14 items-center justify-between">
         {/* Brand */}
